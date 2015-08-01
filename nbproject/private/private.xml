@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="IRMApplicative">
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/views/Default/targetCoreAccueil.html.twig</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/views/Default/targetCoreMaintenance.html.twig</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Controller/HomeController.php</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/views/Default/IRMControl.html.twig</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Entity/adminlistedesregles.php</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/views/layout.html.twig</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/views/IRMbase.html.twig</file>
+            <file>file:/F:/wamp/www/IRMApplicative/web/bundles/grdfdefault/images/logo.jpg</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/views/Home/index.html.twig</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/views/Default/IRMMaintenance.html.twig</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/config/routing.yml</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Controller/DefaultController.php</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/views/Default/targetCoreAdmin.html.twig</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/views/Home/zoom.html.twig</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/views/Default/IRMAccueil.html.twig</file>
+            <file>file:/F:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/views/Default/targetCoreTDB.html.twig</file>
+        </group>
+        <group>
+            <file>file:/C:/wamp/www/IRMApplicative/app/config/config_dev.yml</file>
+            <file>file:/C:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/config/services.yml</file>
+            <file>file:/C:/wamp/www/IRMApplicative/src/Core/AdminBundle/Resources/config/routing.yml</file>
+            <file>file:/C:/wamp/www/IRMApplicative/app/config/routing.yml</file>
+            <file>file:/C:/wamp/www/IRMApplicative/src/Core/AdminBundle/DependencyInjection/Configuration.php</file>
+            <file>file:/C:/wamp/www/IRMApplicative/src/Core/AdminBundle/Controller/HomeController.php</file>
+            <file>file:/C:/wamp/www/IRMApplicative/src/Acme/DemoBundle/Controller/DemoController.php</file>
+            <file>file:/C:/wamp/www/IRMApplicative/src/Grdf/GaiaBundle/Resources/config/services.xml</file>
+            <file>file:/C:/wamp/www/IRMApplicative/app/AppKernel.php</file>
+            <file>file:/C:/wamp/www/IRMApplicative/app/config/security.yml</file>
+            <file>file:/C:/wamp/www/IRMApplicative/src/Grdf/GaiaBundle/GrdfGaiaBundle.php</file>
+            <file>file:/C:/wamp/www/IRMApplicative/app/config/config.yml</file>
+            <file>file:/C:/wamp/www/IRMApplicative/src/Grdf/GaiaBundle/Resources/translations/messages.fr.xlf</file>
+            <file>file:/C:/wamp/www/IRMApplicative/app/config/parameters.yml</file>
+            <file>file:/C:/wamp/www/IRMApplicative/src/Grdf/GaiaBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/wamp/www/IRMApplicative/app/config/services.yml</file>
+            <file>file:/C:/wamp/www/IRMApplicative/src/Grdf/GaiaBundle/Service/GaiaService.php</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,34 @@
+Core\AdminBundle\Entity\ReflisteTypejournal:
+    type: entity
+    table: refliste_typejournal
+    id:
+        refIntTypejournal:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: Ref_Int_TypeJournal
+            generator:
+                strategy: IDENTITY
+    fields:
+        typejournal:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: TypeJournal
+        prioritecategorie:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: PrioriteCategorie
+        prioriteenumeration:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: PrioriteEnumeration
+    lifecycleCallbacks: {  }

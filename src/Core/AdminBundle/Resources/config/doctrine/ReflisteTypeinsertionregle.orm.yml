@@ -1,0 +1,22 @@
+Core\AdminBundle\Entity\ReflisteTypeinsertionregle:
+    type: entity
+    table: refliste_typeinsertionregle
+    id:
+        refIntInsertionregle:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: Ref_Int_InsertionRegle
+            generator:
+                strategy: IDENTITY
+    fields:
+        typeinsertionregle:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: TypeInsertionRegle
+    lifecycleCallbacks: {  }

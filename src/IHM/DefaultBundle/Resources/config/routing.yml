@@ -1,0 +1,4 @@
+IMH_default_actualite:
+    resource: "@IHMDefaultBundle/Resources/config/routing/actualite.php"
+    prefix:   /actualite
+

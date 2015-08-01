@@ -1,0 +1,36 @@
+Core\AdminBundle\Entity\ReferentielhistoriqueApplication:
+    type: entity
+    table: referentielhistorique_application
+    id:
+        cleExtApplicationidexterne:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: Cle_Ext_ApplicationIDExterne
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomapplication:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: NomApplication
+        descriptif:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: Descriptif
+        statut:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: Statut
+    lifecycleCallbacks: {  }

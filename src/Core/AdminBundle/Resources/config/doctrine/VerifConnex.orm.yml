@@ -1,0 +1,15 @@
+Core\AdminBundle\Entity\VerifConnex:
+    type: entity
+    table: verifconnex
+    repositoryClass: Core\AdminBundle\Entity\VerifConnexRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        dateAccess:
+            type: datetime
+            column: DateAccess
+    lifecycleCallbacks: {  }

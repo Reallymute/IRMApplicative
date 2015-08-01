@@ -1,0 +1,101 @@
+_______________________________________________________________________
+Contexte Visual TOM du traitement
+ 
+Machine             : h1l1omg0mp
+Utilisateur         : wm82
+Script              : /appli/omega_shared/omega-support-purge/purgeFS.sh
+Shell               : /bin/ksh
+Serveur Visual TOM  : h1l1jucha
+ 
+Traitement          : h1l1omg0mp_wm82
+Application         : PURGE_FS_TECH
+Environnement       : OMPR_TECHNIQUE
+Job ID              : 23574
+Nombre de relances  : 0
+Label de reprise    : 0
+Mode Execution      : NORMAL
+Date d'exploitation : OMPR_TECHNIQUE
+Valeur de la date   : 20/11/2014
+_______________________________________________________________________
+Thursday 20/11/2014 - 08:30:08
+ Debut de l'execution du script ...
+_______________________________________________________________________
+ 
+20141120 08:30:08#[29346]#omega-support-purge#I#purgeFS.sh;V=V8C.0R13A01;U=wm82;H=h1l1omg0mp;LOG=I;ARGS=;JOB=OMPR_TECHNIQUE/PURGE_FS_TECH/h1l1omg0mp_wm82/23574
+20141120 08:30:08#[29346]#omega-support-purge#I#Logs applicatives (G0827 V8C.0R13A01-00)
+20141120 08:30:08#[29346]#omega-support-purge#I#Fichiers applicatifs (G0833 V8B.0R00-00)
+20141120 08:30:08#[29346]#omega-support-purge#I#Logs techniques (G0834 V8A.0R07-01)
+20141120 08:30:08#[29346]#omega-support-purge#I#Regle : FILE;/logs/tech/tech-wm/tech-wm-metrics-cai;tech-wm-metrics-cai.log.????????;2;15;wm82;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:08#[29346]#omega-support-purge#I#Regle : FILE;/logs/tech/tech-wm/tech-wm-metrics-cai;tech-wm-metrics-cai_trace.log.????????;2;15;wm82;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:08#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55110;FailedAudit_*.log;2;15;wm82;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/FailedAudit_20141104_000001.log.gz
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/FailedAudit_20141103_211939.log.gz
+20141120 08:30:08#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55110/FailedAudit_20141117_000001.log
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/FailedAudit_20141117_000001.log
+20141120 08:30:08#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55110/FailedAudit_20141116_212603.log
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/FailedAudit_20141116_212603.log
+20141120 08:30:08#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55110/FailedAudit_20141116_000005.log
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/FailedAudit_20141116_000005.log
+20141120 08:30:08#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55110;GC_*.log;2;15;wm82;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/GC_IS_PRJ55110_141102_212556.log.gz
+20141120 08:30:08#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55110/GC_IS_PRJ55110_141115_152805.log
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/GC_IS_PRJ55110_141115_152805.log
+20141120 08:30:08#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55110;nohup-IS_*.log;2;15;wm82;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/nohup-IS_h1l1omg0mp_55110_20141102212556.log.gz
+20141120 08:30:08#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55110/nohup-IS_h1l1omg0mp_55110_20141115152805.log
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/nohup-IS_h1l1omg0mp_55110_20141115152805.log
+20141120 08:30:08#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55110;RepoV4Error*.log;2;15;wm82;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/RepoV4Error20141103.log.gz
+20141120 08:30:08#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55110/RepoV4Error20141116.log
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/RepoV4Error20141116.log
+20141120 08:30:08#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55110;server.log.????????;2;15;wm82;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/server.log.20141103.gz
+20141120 08:30:08#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55110/server.log.20141116
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/server.log.20141116
+20141120 08:30:08#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55110;stats????????.log;2;15;wm82;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/stats20141103.log.gz
+20141120 08:30:08#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55110/stats20141116.log
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55110/stats20141116.log
+20141120 08:30:08#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55010;FailedAudit_*.log;2;15;wm82;SUPPORT-CT;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:08#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/FailedAudit_20141104_000015.log.gz
+20141120 08:30:09#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55010/FailedAudit_20141117_000015.log
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/FailedAudit_20141117_000015.log
+20141120 08:30:09#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55010;GC_*.log;2;15;wm82;SUPPORT-CT;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:09#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55010;nohup-IS_*.log;2;15;wm82;SUPPORT-CT;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:09#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55010;RepoV4Error*.log;2;15;wm82;SUPPORT-CT;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:09#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55010;server.log.????????;2;15;wm82;SUPPORT-CT;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/server.log.20141103.gz
+20141120 08:30:09#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55010/server.log.20141116
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/server.log.20141116
+20141120 08:30:09#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55010;stats????????.log;2;15;wm82;SUPPORT-CT;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/stats20141103.log.gz
+20141120 08:30:09#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55010/stats20141116.log
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/stats20141116.log
+20141120 08:30:09#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/is55010;WM*.log;2;15;wm82;SUPPORT-CT;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/WMSESSION_20141103_000015.log.gz
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/WMTXOUT_20141104_000015.log.gz
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/WMTXIN_20141104_000015.log.gz
+20141120 08:30:09#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55010/WMTXIN_20141117_000015.log
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/WMTXIN_20141117_000015.log
+20141120 08:30:09#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55010/WMTXOUT_20141117_000015.log
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/WMTXOUT_20141117_000015.log
+20141120 08:30:09#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/is55010/WMSESSION_20141116_000015.log
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/is55010/WMSESSION_20141116_000015.log
+20141120 08:30:09#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/mws55014;_full_.log.????-??-??;2;15;wm82;SUPPORT-CT;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/mws55014/_full_.log.2014-11-03.gz
+20141120 08:30:09#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/mws55014/_full_.log.2014-11-16
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/mws55014/_full_.log.2014-11-16
+20141120 08:30:09#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/mws55014;_problems_.log.????-??-??;2;15;wm82;SUPPORT-CT;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/mws55014/_problems_.log.2014-11-03.gz
+20141120 08:30:09#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/mws55014/_problems_.log.2014-11-16
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/mws55014/_problems_.log.2014-11-16
+20141120 08:30:09#[29346]#omega-support-purge#I#Regle : FILE;/logs/webmethods/8.2/mws55014;caf.log.????-??-??;2;15;wm82;SUPPORT-CT;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/mws55014/caf.log.2014-11-04.gz
+20141120 08:30:09#[29346]#omega-support-purge#I#gz : /logs/webmethods/8.2/mws55014/caf.log.2014-11-17
+20141120 08:30:09#[29346]#omega-support-purge#I#rm : /logs/webmethods/8.2/mws55014/caf.log.2014-11-17
+20141120 08:30:09#[29346]#omega-support-purge#I#OK
+_______________________________________________________________________
+Thursday 20/11/2014 - 08:30:09
+Fin de l'execution du script.
+ 
+--> Exit [0] donc acquitement

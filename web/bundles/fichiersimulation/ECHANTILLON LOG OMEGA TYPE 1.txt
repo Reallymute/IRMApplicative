@@ -1,0 +1,11 @@
+Nov 20 23:57:38 Prd_E_Omega-Dpe [0x806000ca][ssl][error] valcred(omega-dpe-valcred): trans(132414277)[10.146.22.251]: SSL Proxy Profile 'omega-dpe-ssl_proxy_profile': connection error: peer did not send a certificate
+Nov 20 23:57:38 Prd_E_Omega-Dpe [0x80e00130][mpgw][error] source-https(omega-dpe-FSH_HTTPS): trans(132414277)[10.146.22.251]: could not establish SSL for incoming connection
+Nov 20 23:57:40 Prd_E_Omega-Dpe [0x806000ca][ssl][error] valcred(omega-dpe-valcred): trans(132414325)[83.137.245.145]: SSL Proxy Profile 'omega-dpe-ssl_proxy_profile': connection error: peer did not send a certificate
+Nov 20 23:57:40 Prd_E_Omega-Dpe [0x80e00130][mpgw][error] source-https(omega-dpe-FSH_HTTPS): trans(132414325)[83.137.245.145]: could not establish SSL for incoming connection
+Nov 20 23:57:40 Stg_E_Omega-Dpe [0x806000ca][ssl][error] valcred(omega-dpe-valcred): trans(143218)[10.146.22.251]: SSL Proxy Profile 'omega-dpe-ssl_proxy_profile': connection error: peer did not send a certificate
+Nov 20 23:57:40 Stg_E_Omega-Dpe [0x80e00130][mpgw][error] source-https(omega-dpe-FSH_HTTPS): trans(143218)[10.146.22.251]: could not establish SSL for incoming connection
+Nov 20 23:57:41 Prd_E_Omega-Dpe [0x806000ca][ssl][error] valcred(omega-dpe-valcred): trans(132414373)[10.146.22.250]: SSL Proxy Profile 'omega-dpe-ssl_proxy_profile': connection error: peer did not send a certificate
+Nov 20 23:57:41 Prd_E_Omega-Dpe [0x80e00130][mpgw][error] source-https(omega-dpe-FSH_HTTPS): trans(132414373)[10.146.22.250]: could not establish SSL for incoming connection
+Nov 20 23:57:42 Prd_E_Omega-Dpe [0x806000ca][ssl][error] valcred(omega-dpe-valcred): trans(132414421)[83.137.246.17]: SSL Proxy Profile 'omega-dpe-ssl_proxy_profile': connection error: peer did not send a certificate
+Nov 20 23:57:42 Prd_E_Omega-Dpe [0x80e00130][mpgw][error] source-https(omega-dpe-FSH_HTTPS): trans(132414421)[83.137.246.17]: could not establish SSL for incoming connection
+Nov 20 23:57:42 Stg_E_Omega-Dpe [0x806000ca][ssl][error] valcred(omega-dpe-valcred): trans(2954163)[10.146.22.250]: SSL Proxy Profile 'omega-dpe-ssl_proxy_profile': connection error: peer did not send a certificate

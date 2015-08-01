@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <!--
+    <parameters>
+        <parameter key="grdf_default.example.class">Grdf\DefaultBundle\Example</parameter>
+    </parameters>
+
+    <services>
+        <service id="grdf_default.example" class="%grdf_default.example.class%">
+            <argument type="service" id="service_id" />
+            <argument>plain_value</argument>
+            <argument>%parameter_name%</argument>
+        </service>
+    </services>
+    -->
+    <services>
+        <service id="grdf.twig.crypt_extension" class="Grdf\DefaultBundle\Twig\CryptExtension">
+            <tag name="twig.extension" />
+            <property id="grdf.defaultbundle.crypt" name="crypt" type="service" />
+        </service>
+        <service id="grdf.twig.security_extension" class="Grdf\DefaultBundle\Twig\SecurityExtension">
+            <tag name="twig.extension" />
+            <property id="grdf.defaultbundle.security" name="security" type="service" />
+        </service>
+        <service id="grdf.twig.enum_extension" class="Grdf\DefaultBundle\Twig\EnumExtension">
+            <tag name="twig.extension" />
+        </service>
+        <service id="grdf.twig.util_extension" class="Grdf\DefaultBundle\Twig\UtilExtension">
+            <tag name="twig.extension" />
+            <property id="grdf.defaultbundle.util" name="util" type="service" />
+        </service>
+    </services>
+</container>

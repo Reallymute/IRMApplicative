@@ -1,0 +1,80 @@
+{# empty Twig template #}
+{% extends 'CoreAdminBundle::IRMbase.html.twig' %}
+{% block graphAccueil %}
+<script type="text/javascript" src="{{ asset('bundles/grdfdefault/js/Chart.js-master/Chart.js') }}"></script>
+	<script>
+
+		var doughnutData = [
+				{
+					value: 300,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "Red"
+				},
+				{
+					value: 50,
+					color: "#46BFBD",
+					highlight: "#5AD3D1",
+					label: "Green"
+				},
+				{
+					value: 100,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "Yellow"
+				},
+				{
+					value: 40,
+					color: "#949FB1",
+					highlight: "#A8B3C5",
+					label: "Grey"
+				},
+				{
+					value: 120,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Dark Grey"
+				}
+
+			];
+
+			window.onload = function(){
+				var ctx = document.getElementById("ns_mp-chart-area").getContext("2d");
+				window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+			};
+
+
+
+	</script>
+        
+{% endblock %}
+
+{% block graphChartArea %}
+<div id="apDiv2"> <canvas id="ns_mp-chart-area" width="500" height="500"/> </canvas></div>
+{% endblock %}
+
+{% block contentTable %}
+ </table>
+  <table width="85%" border="2" cellpadding="2px">
+  <tr>
+    <th scope="col">Statut</th>
+    <th scope="col">Tache</th>
+    <th scope="col">Regle</th>
+    <th scope="col">Application</th>
+    <th scope="col">Fonction</th>
+    <th scope="col">Flux Cible</th>
+    <th scope="col">Localisation Cible</th>
+    <th scope="col">Type Traitement</th>
+    <th scope="col">Type Journalisation</th>
+    <th scope="col">Regle Inclusion</th>
+    <th scope="col">Regle Exclusion</th>
+    <th scope="col">Date Premiere Validite</th>
+    <th scope="col">Date Dernier Identification</th>
+    <th scope="col">Frequence</th>
+    <th scope="col">Nombre Execution</th>
+  </tr>
+                 {% for reg in regles %}
+                     <tr>  <td> {{reg.status}}   </td> <td> </td> <td>  <a href="{{ path('core_admin_homepage_zoom',{'slug':reg.id}) }}">{{reg.nom}}</a>   </td> <td> {{reg.incluscrit}}   </td></td><td> </td><td>  <td> {{reg.inclusregle}}   </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td> <td> </td><td> </td></tr>
+                {% endfor  %}
+</table>
+ {% endblock %}

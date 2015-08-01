@@ -1,0 +1,54 @@
+Core\AdminBundle\Entity\ReferentielhistoriqueProvenance:
+    type: entity
+    table: referentielhistorique_provenance
+    id:
+        cleExtProvenanceid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: Cle_Ext_ProvenanceID
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomprovenance:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: NomProvenance
+        descriptionprovenance:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: DescriptionProvenance
+        datemiseenservice:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: CURRENT_TIMESTAMP
+            column: DateMiseEnService
+        dateDisponibilite:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: '0000-00-00 00:00:00'
+            column: Date_Disponibilite
+        utilisateur:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: Utilisateur
+        datesuppression:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: '0000-00-00 00:00:00'
+            column: DateSuppression
+    lifecycleCallbacks: {  }

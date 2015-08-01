@@ -1,0 +1,38 @@
+{# Page d'accueil #}
+
+{% extends 'CoreAdminBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/grdfdefault/css/home.css') }}?20141113" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+   <br>  RETURNED The specified value set at placeholder slug and passed as id ; _____{{id}}
+    <br>  RETURNED AN URL id ; _____{{rq}}
+    <br>   THE AUTHORISATION IS : {{auth}}
+ <div class="marc-listdetail">
+
+     <table class="marc-table">
+                {% for reg in regles %}
+                    <tr> <td> Nom de r&egrave;gle: </td> <th>   {{reg.nom}} </th> </tr>
+                    <tr> <td> Status: </td><th>   {{reg.status}}   </th> </tr>
+                    <tr> <td> Crit&egrave;re: </td><td> {{reg.incluscrit}}   </td>  </tr>
+                    <tr> <td> Ressource: </td><td> {{reg.inclusregle}}   </td> </tr>
+                    <tr> <td> : </td> <td> </td>   </tr>
+                    <tr> <td> : </td> <td> </td>   </tr>
+                    <tr> <td> : </td> <td> </td>   </tr>
+                {% endfor  %}
+            </table>
+ 
+    </div>
+            
+            
+    <!-- Fin liens accès applications -->
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/grdfdefault/js/carousel.js') }}"></script>
+{% endblock %}

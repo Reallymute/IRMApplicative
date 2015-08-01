@@ -1,0 +1,4 @@
+services:
+#    ihm_requetes.example:
+#        class: IHM\RequetesBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

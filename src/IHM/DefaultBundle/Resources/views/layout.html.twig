@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{{ "sitename" }}</title>
+
+        {% block stylesheets %}
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="{{ asset('bundles/grdfdefault/css/bootstrap/bootstrap.min.css') }}?20141113">
+            <link rel="stylesheet" href="{{ asset('bundles/grdfdefault/css/bootstrap/bootstrap-theme.min.css') }}?20141113">
+            <!-- Optional theme 
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css?20141113">
+            -->
+            <!-- <link href="{{ asset('bundles/grdfdefault/vendor/bootstrap/dist/css/bootstrap.css') }}?20141113" rel="stylesheet"> -->
+            <link href="{{ asset('bundles/grdfdefault/vendor/font-awesome/css/font-awesome.min.css') }}?20141113" rel="stylesheet">
+            <!--[if IE 7]>
+                <link href="{{ asset('bundles/grdfdefault/vendor/font-awesome/css/font-awesome-ie7.min.css') }}?20141113" rel="stylesheet">
+            <![endif]-->
+            <link href="{{ asset('bundles/grdfdefault/vendor/select2/select2.css') }}?20141113" rel="stylesheet">
+            <link href="{{ asset('bundles/grdfdefault/vendor/jquery-ui-1.10.3.full/css/flick/jquery-ui-1.10.3.full.min.css') }}?20141113" rel="stylesheet">
+            <link href="{{ asset('bundles/grdfdefault/vendor/colorpicker/css/colorpicker.css') }}?20141113" rel="stylesheet">
+            <link href="{{ asset('bundles/grdfdefault/css/select2-bootstrap3.css') }}?20141113" rel="stylesheet">
+            <link href="{{ asset('bundles/grdfdefault/css/main.css') }}?20141113" rel="stylesheet">
+            <link href="{{ asset('bundles/grdfdefault/css/tinymce.css') }}?20141113" rel="stylesheet">
+            <!-- CSS à enlever par Benjamin -->
+            <link href="{{ asset('bundles/grdfdefault/css/pseudo_css.css') }}?20141113" rel="stylesheet">
+            {% if form is defined %}
+               {#  MARC resplaced {{ form_stylesheet(form) }} #}
+                {{ form(form) }}
+            {% endif %}
+            <style>
+                .select-one span{
+                    text-align:center;
+                    display:inline-block;
+                    width:100%;
+                }
+                .select-two span{
+                    text-align:center;
+                    display:inline-block;
+                    width:340px;
+                }
+                .select-three span{
+                    width:222px;
+                    text-align:center;
+                    display:inline-block;
+                }
+            </style>
+        {% endblock %}
+
+        <!-- IE6-7 JSON -->
+        <!--[if lt IE 8]>
+            <script src="{{ asset('bundles/grdfdefault/vendor/JSON-js/json2.js') }}?20141113"></script>
+        <![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="{{ asset('bundles/grdfdefault/vendor/html5shiv/html5shiv.js') }}?20141113"></script>
+            <script src="{{ asset('bundles/grdfdefault/vendor/respond/respond.min.js') }}?20141113"></script>
+        <![endif]-->
+        <script src="{{ asset('bundles/grdfdefault/vendor/jquery/jquery.min.js') }}?20141113"></script>
+        <script src="{{ asset('bundles/grdfdefault/vendor/jquery-ui-1.10.3.full/js/jquery-ui-1.10.3.custom.min.js') }}?20141113"></script>
+        <script src="{{ asset('bundles/grdfdefault/vendor/jquery-ui-1.10.3.full/js/jquery.ui.datepicker-fr.js') }}?20141113"></script>
+        <script src="{{ asset('bundles/grdfdefault/vendor/bootstrap/dist/js/bootstrap.min.js') }}?20141113"></script>
+        <script src="{{ asset('bundles/grdfdefault/vendor/select2/select2.min.js') }}?20141113"></script>
+        <script src="{{ asset('bundles/grdfdefault/vendor/select2/select2_locale_fr.js') }}?20141113"></script>
+        <script src="{{ asset('bundles/grdfdefault/js/main.js') }}?20141113"></script>
+        <script src="{{ asset('bundles/grdfgeneratedform/js/jquery.generatedform.js') }}?20141124"></script>
+        <script src="{{ asset('bundles/grdfdefault/js/jquery.stickytableheaders.min.js') }}?20141113"></script>
+        
+        <link href="{{ asset('bundles/grdfdefault/images/favicon.ico') }}?20141113" rel="Shortcut Icon" />
+    </head>
+    <body>
+        <div id="header">
+
+            <div class="inner">
+                <div class="profil">
+                    <span class="name">Bienvenue {# gaiaInfos('gaia') #} {{ "gaiaInfos('firstname')" }} {{ "gaiaInfos('name')" }}</span>
+                        <span class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-wrench"></i><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ path('dashboard') }}">Tableau de bord</a></li>
+                               {# {% if isAdminOrAdminApp() %}
+                                    <li><a href="{{ path('admin_generatedform_index') }}">Formulaires</a></li>
+                                    <li><a href="{{ path('admin_application') }}">Applications & offres de mobilité</a></li>
+                                    {% if isAdmin() %}
+                                        <li><a href="{{ path('admin_pack') }}">Packs</a></li>
+                                        <li><a href="{{ path('admin_categorie') }}">Thèmes</a></li>
+                                        <li><a href="{{ path('suggestobject') }}">Objets</a></li>
+                                        <li><a href="{{ path('admin_metier') }}">Métiers</a></li>
+                                        <li><a href="{{ path('actualite') }}">Actualités</a></li>
+                                        <li><a href="{{ path('admin_administrator') }}">Administrateurs</a></li>
+                                    {% endif %}
+                                {% endif %} #}
+                            </ul>
+                        </span>
+                </div>
+                <ul class="navigation">
+
+                    <li class="{% if app.request.pathInfo starts with '/' %}active{% endif %}"><a href="{{ path('home') }}">
+                        <i class="fa fa-lg fa-home"></i>Accueil</a>
+                    </li>
+                    {% if hideDemands == false %}
+                        <li class="{% if app.request.pathInfo starts with '/catalogue/application' %}active{% endif %}">
+                            <a href="{{ path('application',{'code':'application'}) }}"><i class="picto applications"></i>Applications</a>
+                        </li>
+                        <li class="{% if app.request.pathInfo starts with '/catalogue/mobilite' %}active{% endif %}">
+                            <a href="{{ path('application',{'code':'mobilite'}) }}"><i class="picto mobilite"></i>Mobilité</a>
+                        </li>
+                    {% endif %}
+                    <li class="dropdown {% if app.request.pathInfo starts with '/demand/' %}active{% endif %}">
+                        <a href="{{ path('demand') }}" class="dropdown-toggle">
+                            <i class="icon-liste"></i>Gestion des demandes
+                        </a>
+                        <ul class="dropdown-menu demand-menu">
+                            <li><a href="{{ path('create_demand') }}"><i class="fa fa-pencil-square-o"></i> Nouvelle demande</a></li>
+                            <li><a href="{{ path('demand') }}"><i class="fa fa-list-ul"></i> Liste des demandes</a></li>
+                        </ul>
+                    </li>
+                    <li class="{% if app.request.pathInfo starts with '/suggestion/' %}active{% endif %}">
+                        <a href="{{ path('suggest') }}"><i class="icon-qr"></i>Questions et suggestions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="mid">
+        {% block search %}{% endblock %}
+        <div class="container {% block containerClass %}{% endblock %}">
+            <div class="content">
+            {% block h1 %}{% endblock %}
+            {% block flashbags %}
+                {% include 'GrdfDefaultBundle:Common:flashbags.html.twig' %}
+            {% endblock %}
+        {% block content %}{% endblock %}
+    </div>
+</div>
+</div>
+
+{% block javascripts %}
+    {% if form is defined %}
+        {{ form(form) }}
+        {# was form_javascript #}
+    {% endif %}
+{% endblock %}
+
+<!-- Piwik -->
+{% if app.environment == 'prod' %}
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u = (("https:" == document.location.protocol) ? "https" : "http") + "://piwik.carma.grdf.fr/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', 2]);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.defer = true;
+            g.async = true;
+            g.src = u + 'piwik.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <noscript><p><img src="http://piwik.carma.grdf.fr/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+{% endif %}
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $('li.dropdown').hover(function() { 
+            $(this).addClass('open'); 
+        }, 
+        function() { 
+            $(this).removeClass('open'); 
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+{# Page d'accueil #}
+
+{% extends 'CoreAdminBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/grdfdefault/css/home.css') }}?20141113" rel="stylesheet">
+{% endblock %}
+
+{% block contentdebug %}
+      <br>  RETURNED The last element in the path of URL ; _____{{id}}
+    <br>  RETURNED Date Access ; _____{{access}}
+    <br>  RETURNED array {{ertu.1}} 
+     <br>  RETURNED nom Regle{{reglenom}}  
+
+{% endblock %}
+
+{% block content %}
+  <h1 class="pm-titre-s">Commandes</h1>
+<div >
+  {# <div class="btn-group pull-right"> #}
+   <div > 
+       {#  <ul id="menu3" class="dropdown-menu dropdown-inverse" role="menu" > #}
+       <ul>
+            <li ><a title="Test 1" role="menuitem" tabindex="-1" href="{{ path('core_admin_default',{'id':'Try'}) }}">Exporter les applications</a></li>
+            <li ><a title="Exporter les suggestions" role="menuitem" tabindex="-2" href="{{ path('core_admin_default',{'id':'Try2'}) }}">Exporter les suggestions</a></li>
+        </ul>
+    </div> 
+</div>    
+ 
+          <h1 class="pm-titre-s">Liste R&egrave;gles</h1>
+          <br>
+
+            <table class="marc-table">
+                {% for reg in regles %}
+                    <tr> <td>  <a href="{{ path('core_admin_homepage_zoom',{'slug':reg.id}) }}">{{reg.nom}}</a>   </td> <td> &rightrightarrows;  {{reg.status}}   </td> <td> {{reg.incluscrit}}   </td> <td> {{reg.inclusregle}}   </td> </tr>
+                {% endfor  %}
+            </table>
+    <div >
+        {#
+        <div id="controls">
+            <a class="prev">Previous</a>
+            <a class="startStop">Pause / Stop</a>
+            <a class="next">Next</a>
+        </div>
+      <ul id="itemView">
+            <li relItem="carou" class="indexed">
+                <div id="caroussel-illu"><img src="{{ asset('bundles/grdfdefault/images/illustration/caroussel_illustration.png') }}" alt="Tutoriel"></div>
+            </li>
+        {% for actuality in actualities %}
+            <!-- Images non statiques du carousel -->
+            <li relItem="carou">
+                {% set assetPath = 'bundles/grdfdefault/images/illustration/actu_default.png' %}
+                {% set altLogo = 'Image non définie' %}
+                {% if actuality.pictureFilename is defined and actuality.pictureFilename is not empty %}
+                    {% set assetPath = actuality.pictureFilename|assetPath %}
+                    {% set altLogo = "Image de l'actualité " ~ actuality.title %}
+                    <div class="pull-left">
+                        <img src="{{ asset(assetPath) }}" alt="{{ altLogo }}">
+                    </div>
+                {% else %}
+                    <div class="pull-left">
+                        <img src="{{ asset('bundles/grdfdefault/images/illustration/actu_default.png') }}" alt="{{ altLogo }}">
+                    </div>
+                {% endif %}
+                
+                <div>
+                    <h2 class="itemTitle">
+                        {{ actuality.title|raw  }}
+                    </h2>
+                    <div class="itemDescription">
+                        {{ actuality.description|raw  }}
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+            
+        <ul id="itemSelect">
+            <li relItem="carou" class="active">X</li>
+            <!-- Titre des images en accord avec le carousel -->
+            {% for actuality in actualities %}
+                <li relItem="carou">{{ actuality.priority + 1 }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!-- /Carousel -->
+    
+    <!-- Liens accès applications -->
+    <div class="home-links">
+        <a href="{{path('application',{'code':'application'})}}" title="Catalogues des applications.">
+            <img src="{{ asset('bundles/grdfdefault/images/illustration/application.png') }}" class="img-responsive" alt="Catalogues">
+            <span>Applications</span> 
+        </a>
+        
+        <a href="{{path('application',{'code':'mobilite'})}}" title="Catalogues des offres mobilité.">
+            <img src="{{ asset('bundles/grdfdefault/images/illustration/mobilite_newipad.png') }}" class="img-responsive" alt="Mobilité">
+            <span>Mobilité</span>
+        </a>#}
+    </div>
+            
+    <!-- Fin liens accès applications -->
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/grdfdefault/js/carousel.js') }}"></script>
+{% endblock %}

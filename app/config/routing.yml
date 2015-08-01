@@ -1,0 +1,32 @@
+#grdf_gaia:
+#    resource: "@GrdfGaiaBundle/Controller/"
+#    type:     annotation
+ #   prefix:   /
+
+#grdf_default:
+#    resource: "@GrdfDefaultBundle/Controller/"
+#    type:     annotation
+#    prefix:   /grdf
+
+ihm_requetes:
+    resource: "@IHMRequetesBundle/Resources/config/routing.yml"
+    prefix:   /ihm
+    
+#ihm_default:
+ #   resource: "@IHMDefaultBundle/Resources/config/routing.yml"
+ #   type:     annotation
+ #   prefix:   /
+# was /
+core_extensible:
+    resource: "@CoreExtensibleBundle/Resources/config/routing.yml"
+    prefix:   /coreExtensible
+# was /
+core_admin:
+    resource: "@CoreAdminBundle/Resources/config/routing.yml"
+    prefix:   /coreAdmin
+# was /
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+

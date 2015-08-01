@@ -1,0 +1,51 @@
+_______________________________________________________________________
+Contexte Visual TOM du traitement
+ 
+Machine             : h1l1omg0mp
+Utilisateur         : uae_oup
+Script              : /appli/omega_shared/omega-support-purge/purgeFS.sh
+Shell               : /bin/ksh
+Serveur Visual TOM  : h1l1jucha
+ 
+Traitement          : h1l1omg0mp
+Application         : PURGE_FS
+Environnement       : OMPR_FONCTIONNEL
+Job ID              : 70222
+Nombre de relances  : 0
+Label de reprise    : 0
+Mode Execution      : NORMAL
+Date d'exploitation : OMPR_FONCTIONNEL
+Valeur de la date   : 18/11/2014
+_______________________________________________________________________
+Tuesday 18/11/2014 - 08:00:08
+ Debut de l'execution du script ...
+_______________________________________________________________________
+ 
+20141118 08:00:08#[28391]#omega-support-purge#I#purgeFS.sh;V=V8C.0R13A01;U=uae_oup;H=h1l1omg0mp;LOG=I;ARGS=;JOB=OMPR_FONCTIONNEL/PURGE_FS/h1l1omg0mp/70222
+20141118 08:00:08#[28391]#omega-support-purge#I#Logs applicatives (G0827 V8C.0R13A01-00)
+20141118 08:00:08#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ppe-ech-msp;omega-ppe-ech-msp.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:08#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ppe-ech-uniserv;omega-ppe-ech-uniserv.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:08#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ppe-ech-vtom;omega-ppe-ech-vtom.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:08#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ppe-ech-vtom-arc-ppe;omega-ppe-ech-vtom-arc-ppe.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:08#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ppe-ech-vtom-arc-streamserve;omega-ppe-ech-vtom-arc-streamserve.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:09#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ines-data-sql;omega-ines-data-sql.log.????????;3;15;uae_oup;SUPPORT-CT;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:09#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ppe-ech-extra;omega-ppe-ech-extra.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:09#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ppe-ech-extra;omega-ppe-ech-extra-cnx.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:09#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ppe-ech-extra;omega-ppe-ech-extra-cnx.log.????????.raw.*;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:09#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ppe-ftp-io;omega-ppe-ftp-io.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:09#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-support-add-cad;omega-support-add-cad.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:09#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-support-add-cad;omega-support-add-cad.log.????????.U??.*.*;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:09#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ppe-ech-extra-factu;omega-ppe-ech-extra-factu.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:09#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-support-add-gmao;omega-support-add-gmao.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:09#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-support-sla-inesoss;omega-support-sla-inesoss.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:10#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-ppe-ftp-nas;omega-ppe-ftp-nas.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:10#[28391]#omega-support-purge#I#Regle : FILE;/logs/omega/omega-support-add-refentite;omega-support-add-refentite.log.????????;3;15;uae_oup;PPE-ECH;D1,D2,I1,I2,I3,R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:10#[28391]#omega-support-purge#I#Fichiers applicatifs (G0833 V8B.0R00-00)
+20141118 08:00:10#[28391]#omega-support-purge#I#Regle : FILE;/appli/omega/salvage;omega-*.??????????????.tar.gz;;10;uae_oup;;R1,R2,R3,R4,PF,HO,FO,PR,PP
+20141118 08:00:10#[28391]#omega-support-purge#I#Logs techniques (G0834 V8A.0R07-01)
+20141118 08:00:10#[28391]#omega-support-purge#I#OK
+_______________________________________________________________________
+Tuesday 18/11/2014 - 08:00:10
+Fin de l'execution du script.
+ 
+--> Exit [0] donc acquitement

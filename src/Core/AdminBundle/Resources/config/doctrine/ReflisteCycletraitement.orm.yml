@@ -1,0 +1,29 @@
+Core\AdminBundle\Entity\ReflisteCycletraitement:
+    type: entity
+    table: refliste_cycletraitement
+    id:
+        refIntCycletraitement:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: Ref_Int_CycleTraitement
+            generator:
+                strategy: IDENTITY
+    fields:
+        typecycle:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: TypeCycle
+        refIntRegle:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: Ref_Int_Regle
+    lifecycleCallbacks: {  }

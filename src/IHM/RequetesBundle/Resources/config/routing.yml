@@ -1,0 +1,14 @@
+ihm_requetes_homepage:
+    path:     /{name}
+    defaults: { _controller: IHMRequetesBundle:Default:index }
+ihm_requetes_req:
+    path:     /req/{query}
+    defaults: { _controller: IHMRequetesBundle:Default:reg }
+
+_b_p_m:
+    path:     /BPM
+    defaults: { _controller: IHMRequetesBundle:Detecter:BPM }
+
+_m_q:
+    path:     /MQ
+    defaults: { _controller: IHMRequetesBundle:Detecter:MQ }

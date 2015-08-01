@@ -1,0 +1,88 @@
+Core\AdminBundle\Entity\JournalFonctionetapplication:
+    type: entity
+    table: journal_fonctionetapplication
+    id:
+        'no':
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: 'No'
+            generator:
+                strategy: IDENTITY
+    fields:
+        typejournal:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: TypeJournal
+        cleExtApplication:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: Cle_Ext_Application
+        cleExtFonction:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: Cle_Ext_Fonction
+        nomapplication:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: NomApplication
+        nomfonction:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: NomFonction
+        datedebutperioderef:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: CURRENT_TIMESTAMP
+            column: DateDebutPeriodeRef
+        datepremiereactivite:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: '0000-00-00 00:00:00'
+            column: DatePremiereActivite
+        datearretactivite:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: '0000-00-00 00:00:00'
+            column: DateArretActivite
+        cleExtRelationLogique:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: Cle_Ext_Relation_Logique
+        cleExtProvenance:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: Cle_Ext_Provenance
+        datefindeperioderef:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: '0000-00-00 00:00:00'
+            column: DateFinDePeriodeRef
+    lifecycleCallbacks: {  }

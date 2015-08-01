@@ -1,0 +1,48 @@
+Core\AdminBundle\Entity\adminlistedesregles:
+    type: entity
+    table: admin_listedesregles
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        refIntRegle:
+            type: integer
+            column: Ref_Int_Regle
+        typeRegle:
+            type: string
+            length: 255
+            column: TypeRegle
+        regleNom:
+            type: string
+            length: 255
+            column: RegleNom
+        refIntRegleLiee:
+            type: string
+            length: 255
+            column: Ref_Int_RegleLiee
+        statutActive:
+            type: integer
+            column: StatutActive
+        priorite:
+            type: integer
+            column: Priorite
+        critereInclusion:
+            type: string
+            length: 255
+            column: CritereInclusion
+        critereExclusion:
+            type: string
+            length: 255
+            column: CritereExclusion
+        ressourceInclusionRegle:
+            type: string
+            length: 255
+            column: RessourceInclusionRegle
+        refTypeInsertionRegle:
+            type: string
+            length: 255
+            column: Ref_Type_InsertionRegle
+    lifecycleCallbacks: {  }

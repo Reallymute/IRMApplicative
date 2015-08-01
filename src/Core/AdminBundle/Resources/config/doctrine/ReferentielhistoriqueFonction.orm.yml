@@ -1,0 +1,61 @@
+Core\AdminBundle\Entity\ReferentielhistoriqueFonction:
+    type: entity
+    table: referentielhistorique_fonction
+    id:
+        cleExtFonctionid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: Cle_Ext_FonctionID
+            generator:
+                strategy: IDENTITY
+    fields:
+        cleExtApplicationidexterne:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: Cle_Ext_ApplicationIDExterne
+        nomfonction:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: NomFonction
+        descriptionfonction:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: DescriptionFonction
+        datemiseenservice:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: CURRENT_TIMESTAMP
+            column: DateMiseEnService
+        dateDisponibilite:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: '0000-00-00 00:00:00'
+            column: Date_Disponibilite
+        utilisateur:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: Utilisateur
+        datesuppression:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: '0000-00-00 00:00:00'
+            column: DateSuppression
+    lifecycleCallbacks: {  }

@@ -1,0 +1,24 @@
+core_admin_default:
+    path:     /{id}
+    defaults: { _controller: CoreAdminBundle:Default:index }
+core_admin_homepageid:
+    path:     /home/{id}
+    defaults: { _controller: CoreAdminBundle:Home:indexid }
+core_admin_homepage:
+    path:     /home/
+    defaults: { _controller: CoreAdminBundle:Home:index }
+core_admin_homepage_zoom:
+    path:     /home/zoom/{slug}
+    defaults: { _controller: CoreAdminBundle:Home:zoom }
+core_admin_openpage:
+    path:     /accueil/{slug}
+    defaults: { _controller: CoreAdminBundle:Default:accueil }
+core_admin_TDBpage:
+    path:     /tableaudebord/{slug}
+    defaults: { _controller: CoreAdminBundle:Default:tableaudebord }
+core_admin_maintenancepage:
+    path:     /maintenance/{slug}
+    defaults: { _controller: CoreAdminBundle:Default:maintenance }
+core_admin_controlpage:
+    path:     /control/{slug}
+    defaults: { _controller: CoreAdminBundle:Default:control }

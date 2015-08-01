@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<title> {% block title %}{% endblock %}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="{{ asset('bundles/grdfdefault/css/home.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('bundles/grdfdefault/css/main.css') }}" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="{{ asset('bundles/grdfdefault/vendor/SpryAssets/SpryMenuBar.js') }}" type="text/javascript"></script>
+<link href="{{ asset('bundles/grdfdefault/vendor/SpryAssets/SpryMenuBarHorizontal.css') }}" rel="stylesheet" type="text/css">
+
+{% block graphAccueil %}{% endblock %}
+<style type="text/css">
+#apDiv2 {
+	position:absolute;
+	width:200px;
+	height:425px;
+	z-index:1;
+	left: 72px;
+	top: 89px;
+}
+</style>
+</head>
+
+<body>
+{% block enTete %}{% endblock %}    
+{% block graphChartArea %}{% endblock %}
+<div class="container">
+  <header></header>
+  <div class="sidebar1">
+    <nav>
+      <ul>
+        <li></li>
+      </ul>
+    </nav>
+  </div>
+  <footer> </footer>
+  <!-- end .container --></div>
+<ul id="ns_mp-MenuPrin" class="MenuBarHorizontal">
+  <li><a class="{% block spryMenuClassAdmin %}{% endblock %}" href="#">Contrôle</a>
+    <ul>
+      <li><a href="{{ path('core_admin_controlpage',{'slug':"OPEN"}) }}">Ouvrir</a></li>
+      <li><a href="{{ path('core_admin_controlpage',{'slug':"CLOSE"}) }}">Fermer</a></li>
+      <li><a href="{{ path('core_admin_controlpage',{'slug':"MODIFY"}) }}">Modifier</a></li>
+    </ul>
+  </li>
+  
+  <li><a href="#" class="{% block spryMenuClassTDB %}{% endblock %}">Tableau de Bord</a> 
+    <ul>
+      <li><a href="{{ path('core_admin_TDBpage',{'slug':"OPEN"}) }}">Ouvrir</a></li>
+      <li><a href="{{ path('core_admin_TDBpage',{'slug':"CLOSE"}) }}">Fermer</a></li>
+    </ul>
+  </li>
+  <li><a class="{% block spryMenuClassMaintenance %}{% endblock %}" href="#">Maintenance</a>
+    <ul>
+      <li><a href="{{ path('core_admin_maintenancepage',{'slug':"OPEN"}) }}">Ouvrir</a>      </li>
+      <li><a href="{{ path('core_admin_maintenancepage',{'slug':"CLOSE"}) }}">Fermer</a></li>
+      <li><a href="{{ path('core_admin_maintenancepage',{'slug':"MODIFY"}) }}">Modifier</a></li>
+    </ul>
+  </li>
+</ul>
+<img src="{{ asset('bundles/grdfdefault/images/logo.jpg') }}" > 
+<br>
+<h1 id="ns_mp-grostitre">IRM Applicative</h1>
+<br>
+<h1 id="ns_mp-moyentitre">Maquette juin 2015</h1>
+<p>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("ns_mp-MenuPrin", {imgDown:"{{ asset('bundles/grdfdefault/vendor/SpryAssets/SpryMenuBarDownHover.gif') }}", imgRight:"{{asset('bundles/grdfdefault/vendor/SpryAssets/SpryMenuBarRightHover.gif') }}"});
+</script>
+{#
+<table width="2%" border="0">
+    <tr>
+      <th scope="col">&nbsp;</th>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+</table>
+    #}
+ {% block contentTable %} {% endblock %}
+
+</body>
+</html>
