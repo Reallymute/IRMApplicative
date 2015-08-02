@@ -3,3 +3,7 @@
 !app/cache/.gitkeep
 /app/logs/*
 !app/logs/.gitkeep
+!/src/*
+/vendor/*
+/bin/*
+/nbproject/*

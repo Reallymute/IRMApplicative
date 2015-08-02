@@ -1,3 +1,8 @@
+irm_security:
+    resource: "@IRMSecurityBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
 #grdf_gaia:
 #    resource: "@GrdfGaiaBundle/Controller/"
 #    type:     annotation

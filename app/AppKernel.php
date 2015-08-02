@@ -29,7 +29,8 @@ class AppKernel extends Kernel
              //// added two lines following instructions 
              //in jsmyst.com
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
-            new JMS\AopBundle\JMSAopBundle()
+            new JMS\AopBundle\JMSAopBundle(),
+            new Core\IRMSecurityBundle\IRMSecurityBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

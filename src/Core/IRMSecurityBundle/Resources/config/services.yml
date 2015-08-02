@@ -1,0 +1,16 @@
+parameters:
+    # ce paramètre doit contenir l'id du service qui est déclaré dans un
+    # container de services et qui répond aux exigences d'IRMSecurity
+    # un appel à la méthode 'CapabilitiesAndUsage' de cette classe
+    #  Core\IRMSecurityBundle\Service\IRMSecurityService(ContainerInstance,string)
+    # permet de connaître les minimums requis
+    irm_security.localsecurityservice.id: grdf.gaiabundle.gaia
+    irm_security.localsecurityservice.class: Grdf/GaiaBundle/Service/GaiaService
+    
+services:
+#    irm_security.example:
+#        class: Core\IRMSecurityBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+    irm_security.security:
+        class: Core\IRMSecurityBundle\Service\IRMSecurityService
+        arguments: [@service_container,%irm_security.localsecurityservice.id%]

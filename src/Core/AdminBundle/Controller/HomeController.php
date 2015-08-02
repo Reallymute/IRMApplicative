@@ -12,8 +12,13 @@ class HomeController extends Controller
 {
     
     /**
-     * @DI\Inject("grdf.gaiabundle.gaia")
-     * @var \Grdf\GaiaBundle\Service\GaiaService
+     * <atSign>DI\Inject("irm_security.security")
+     * <atSign>var \Core\IRMSecurityBundle\Service\IRMSecurityService
+       * <atSign>DI\Inject("grdf.gaiabundle.gaia")
+      * <atSign>var \Grdf\GaiaBundle\Service\GaiaService
+      * @DI\Inject("irm_security.security")
+     * @var \Core\IRMSecurityBundle\Service\IRMSecurityService
+ * 
      */
     public $gaia;
 
@@ -95,7 +100,7 @@ class HomeController extends Controller
             
         }
         $auth = "";
-            $auth = $auth.$this->gaia->getGaiaStatus();
+            $auth = $auth.$this->gaia->getIRMSecurityStatus();
             
           //  $auth = $auth.$this->gaia->getGaiaValues('gaia');
     

@@ -1,0 +1,3 @@
+irm_security_homepage:
+    path:     /security/{name}
+    defaults: { _controller: IRMSecurityBundle:Default:index }

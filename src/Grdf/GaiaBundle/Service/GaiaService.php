@@ -15,6 +15,8 @@ class GaiaService extends ContainerAware
     //public $container;
     
     //  MARC LATEST WORK 31 july 2015
+    // MARC replaced the annotation-driven containre reference by the explicte
+    //  use of the container as a parameter in service.xml
     public function __construct(ContainerInterface $conty) {
         
         $this->setContainer($conty);
@@ -82,9 +84,7 @@ class GaiaService extends ContainerAware
         $key = strtolower($key);
 
         return $this->container->get('request')->headers->get($key);
-        // MARC repleaced line above with one below
-        
-        //return $this->get('request')->headers->get($key);
+
     }
 public function getGaiaStatus() {
     
@@ -93,7 +93,7 @@ public function getGaiaStatus() {
     if (is_object($this->container)) {
         
         $this->container->set("grdf.gaiabundle.gaia",$this);
-        return 'FUNCTIONING : CONTAINER IS INSTATIATED'; 
+        return 'INFO : CONTAINER IS INSTATIATED'; 
     }
     return 'ERROR : CONTAINER FAILED TO INSTATIATE';
 }
