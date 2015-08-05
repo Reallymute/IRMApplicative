@@ -10,6 +10,9 @@ core_admin_homepage:
 core_admin_homepage_zoom:
     path:     /home/zoom/{slug}
     defaults: { _controller: CoreAdminBundle:Home:zoom }
+core_admin_zoom:
+    path:     /zoom/{slug}
+    defaults: { _controller: CoreAdminBundle:Default:zoom }
 core_admin_openpage:
     path:     /accueil/{slug}
     defaults: { _controller: CoreAdminBundle:Default:accueil }

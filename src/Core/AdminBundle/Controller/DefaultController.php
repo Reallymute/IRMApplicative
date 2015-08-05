@@ -3,9 +3,24 @@
 namespace Core\AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+
+use JMS\DiExtraBundle\Annotation as DI;
 
 class DefaultController extends Controller
 {
+    
+        /**
+     * <atSign>DI\Inject("irm_security.security")
+     * <atSign>var \Core\IRMSecurityBundle\Service\IRMSecurityService
+       * <atSign>DI\Inject("grdf.gaiabundle.gaia")
+      * <atSign>var \Grdf\GaiaBundle\Service\GaiaService
+      * @DI\Inject("irm_security.security")
+     * @var \Core\IRMSecurityBundle\Service\IRMSecurityService
+ * 
+     */
+    public $irmsecurity;
+    
     public function indexAction($id)
     {
         return $this->render('CoreAdminBundle:Default:index.html.twig', array('id' => $id));
@@ -79,5 +94,39 @@ class DefaultController extends Controller
         
         return $regle;
     }
+    
+    //  MARC LAST WORKED HERE AUG 2 2015
+        public function zoomAction(Request $request,$slug) {
+ 
+        
+        $repid = 'CoreAdminBundle:adminlistedesregles';
+       $rep2 = $this->getDoctrine()->getRepository($repid);
+       $dernierAcces2 = $rep2->findBy(Array('id'=>"=".$slug));
+       $dernierAcces2 = $rep2->find($slug);
+       
+        $regle = $this->extraireRegles($dernierAcces2);
+        
+        
+        if (is_null($regle) ) {
+       $regle = Array(0=>Array('nom'=>"AUCUNE REGLE CORRESPOND A ID "."=".$slug." Dans ".$repid,'status'=>"LISTE VIDE",'incluscrit'=>"",'inclusregle'=>"",'id'=>""));
+            }
+        else {
+            if (array_key_exists(0, $regle)) {
+                
+            }
+            else {
+        $regle = Array(0=>Array('nom'=>"AUCUNE REGLE CORRESPOND A ID "."=".$slug." Dans ".$repid,'status'=>"LISTE VIDE",'incluscrit'=>"",'inclusregle'=>"",'id'=>""));
+               
+            }
+            
+        }
+        // $irmsecurity a été injecté à l'instanciation de la class
+         $auth = $this->irmsecurity->getIRMSecurityStatus();
+         
+         $auth = $auth.$this->irmsecurity->getCapabilities(1,"YAML");
+          return $this->render('CoreAdminBundle:Default:zoom.html.twig', array('auth' => $auth,'id' => $slug,'rq'=>$request->getBaseUrl(),'regles'=>$regle));
+           
+    }
+
         }
 

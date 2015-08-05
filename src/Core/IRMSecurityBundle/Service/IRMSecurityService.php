@@ -11,7 +11,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 /**
  * Cette classe prend en charge les aspects sécurité de l'IRM Applicative
  */
-
 class IRMSecurityService extends ContainerAware
 {
     
@@ -28,75 +27,14 @@ class IRMSecurityService extends ContainerAware
        //  Expected : "grdf.gaiabundle.gaia"
         $this->localSecurityServiceId = $_localSecurityServiceName;
     }
-//    
-//    /**
-//     * @var \Doctrine\ORM\EntityManager
-//     */
-//    public $em;
-//
-//    private function getGroupFromGaia($gaia)
-//    {
-//        $o = $this->em->getRepository('GrdfGaiaBundle:User')->find($gaia);
-//        if ($o instanceof \Grdf\GaiaBundle\Entity\User && $o->getGroup()) {
-//            return $o->getGroup()->getId();
-//        }
-//        return null;
-//    }
-//
-//    /**
-//     * Recupere toutes les infos gaia necessaires
-//     *
-//     * @return type
-//     */
-//    public function getGaiaValues($keyAsked = null)
-//    {
-//        $mapping = array(
-//            'HTTP_SM_UNIVERSALID' => 'gaia',
-//            'HTTP_GAIA_NNI' => 'nni',
-//            'HTTP_GAIA_CIVILITE' => 'civility',
-//            'HTTP_GAIA_PRENOM' => 'firstname',
-//            'HTTP_GAIA_NOM' => 'name',
-//            'HTTP_GAIA_EMAIL' => 'email'
-//        );
-//
-//        $o = array();
-//
-//        foreach ($mapping as $key => $value) {
-//            $o[$value] = $this->getGaiaValueByKey($key);
-//        }
-//
-//        $o['group'] = null;
-//        if ($o['gaia']) {
-//            $o['group'] = $this->getGroupFromGaia($o['gaia']);
-//        }
-//
-//        //$o['gaia'] = 'BX2076';
-//
-//        if ($keyAsked) {
-//            return $o[$keyAsked];
-//        }
-//        return $o;
-//    }
-//
-//    /**
-//     * Get an header value
-//     *
-//     * @param string $key
-//     * @return string
-//     */
-//    private function getGaiaValueByKey($key)
-//    {
-//        $key = str_replace('HTTP_', '', $key);
-//        $key = str_replace('_', '-', $key);
-//        $key = strtolower($key);
-//
-//        return $this->container->get('request')->headers->get($key);
-//
-//    }
+
+    
     
 /**
- * Methode qui obtient le status Gaia sur service Gaia 'grdf.gaiabundle.gaia'
- * @return string with arbitrary status description
+ * Methode qui obtient le status sur le service qui est précisé dans
+ * le fichier service.yml qui se trouve dans :
+ *   %bundle-root%/Resources/config/service.yml/irm_security.security
+ * @return string with arbitrary status description depending on base security service
  */    
 public function getIRMSecurityStatus() {
     
@@ -110,4 +48,50 @@ public function getIRMSecurityStatus() {
     }
     return $retval;
 }
+/**
+ * renvoi une liste des capacités de la classe de services IRMSecurity
+ * @version 0.1
+ * @param numeric $positionInList un nombre entier > 0 visant une capacité ayant un numéro d'ordre
+ * @param string $format valeurs attendues YAML | JSON
+ * @return string
+ */
+public function getCapabilities($positionInList,$format = "YAML") {
+    $positionRequested = 0;
+    $retval = "ERROR : Pas de capacités inscrites";
+    if (is_null($positionInList)) {
+        
+    }
+    else {
+        if (is_numeric($positionInList)) {
+            if ($positionInList > 0 && $positionInList < 2500) {
+                $positionRequested = $positionInList;
+            }
+        }
+    }
+    $retval = "countofcapabilities : 1\n"
+."capabilities:\n"
+    ."getSecurityStatus:\n"
+        ."return: string\n"
+        ."arguments: []\n";
+ 
+    
+    switch ($format) {
+        case "YAML":
+
+
+            break;
+        case "JSON":
+
+
+            break;
+
+        default:
+            break;
+    }
+     // TODO: créer la liste des capacités sous forme de structure YAML ou JSON
+    return $retval;
+   
+    }
+    
 }
+

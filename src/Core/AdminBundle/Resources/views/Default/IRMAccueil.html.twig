@@ -74,7 +74,7 @@
     <th scope="col">Nombre Execution</th>
   </tr>
                  {% for reg in regles %}
-                     <tr>  <td> {{reg.status}}   </td> <td> </td> <td>  <a href="{{ path('core_admin_homepage_zoom',{'slug':reg.id}) }}">{{reg.nom}}</a>   </td> <td> {{reg.incluscrit}}   </td></td><td> </td><td>  <td> {{reg.inclusregle}}   </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td> <td> </td><td> </td></tr>
+                     <tr>  <td> {{reg.status}}   </td> <td> </td> <td>  <a href="{{ path('core_admin_zoom',{'slug':reg.id}) }}">{{reg.nom}}</a>   </td> <td> {{reg.incluscrit}}   </td></td><td> </td><td>  <td> {{reg.inclusregle}}   </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td> <td> </td><td> </td></tr>
                 {% endfor  %}
 </table>
  {% endblock %}
