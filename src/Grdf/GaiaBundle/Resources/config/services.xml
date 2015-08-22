@@ -24,6 +24,17 @@
              <argument type="service" id="service_container" />
            
          </service>
-    </services>
+   <!--  Marc a insré le c*service qui correspond au GaiaListener -->
+        <service id="grdf.gaiabundle.listener.request" class="Grdf\GaiaBundle\Listener\RequestListener">
+            <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" />
+            <tag name="kernel.event_listener" event="kernel.controller" method="onFilterController" />
+            <tag name="kernel.event_listener" event="kernel.exception" method="onKernelException" />
+            <argument type="service" id="annotation_reader" />
+            <argument type="service" id="grdf.gaiabundle.gaia" />    
+            <argument type="service" id="irm_security.security" />            
+        </service>
+      
+         
+  </services>
    
 </container>

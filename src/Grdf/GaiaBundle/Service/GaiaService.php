@@ -14,7 +14,6 @@ class GaiaService extends ContainerAware
      */
     //public $container;
     
-    //  MARC LATEST WORK 31 july 2015
     // MARC replaced the annotation-driven containre reference by the explicte
     //  use of the container as a parameter in service.xml
     public function __construct(ContainerInterface $conty) {

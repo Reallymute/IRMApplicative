@@ -2,12 +2,26 @@
 # http://symfony.com/doc/current/book/service_container.html
 parameters:
 #    parameter_name: value
+    doc.reader.class: Doctrine\Common\Annotations\Reader
+
+# MARC added the import of the gaia services
+imports:
+    - { resource: "@GrdfGaiaBundle/Resources/config/services.xml" }
+    - { resource: "@IRMSecurityBundle/Resources/config/services.yml" }
 
 services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
-# MARC added the import of the gaia services
-imports:
-    - { resource: "@GrdfGaiaBundle/Resources/config/services.xml" }
-    - { resource: "@IRMSecurityBundle/Resources/config/services.yml" }
+
+# MARC a ajouté la référence au Listener généric 'kernel.event_listener'
+#    ceci va permettre l'IRM applicative de contrôler chaque requête avant que 
+#    la requête soit transféré par le superviseur symfony2 vers le
+#    Controller qui doit traiter la requête
+#    gaia.event_listener:
+#        class: Grdf\GaiaBundle\Listener\RequestListener
+#        arguments: ["@service_container"]
+#        tags:
+#            - { name: kernel.event_listener, event: kernel.contoller, method: onfilterContoller }
+
+

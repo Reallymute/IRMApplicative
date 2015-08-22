@@ -4,6 +4,7 @@ namespace Core\AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Grdf\GaiaBundle\Annotation\RequiresGaia;
 
 use JMS\DiExtraBundle\Annotation as DI;
 
@@ -96,6 +97,13 @@ class DefaultController extends Controller
     }
     
     //  MARC LAST WORKED HERE AUG 2 2015
+    /**
+     * 
+     * @param Request $request
+     * @param type $slug
+     * @return type
+     * @RequiresGaia("admin")
+     */
         public function zoomAction(Request $request,$slug) {
  
         

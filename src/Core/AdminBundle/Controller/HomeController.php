@@ -4,6 +4,7 @@ namespace Core\AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Grdf\GaiaBundle\Annotation\RequiresGaia;
 //use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 use JMS\DiExtraBundle\Annotation as DI;
@@ -71,6 +72,14 @@ class HomeController extends Controller
     public function indexAction() {
         return $this->indexidAction("NULL");
     }
+    
+    /**
+     * 
+     * @param Request $request
+     * @param type $slug
+     * @return type
+     * @RequiresGaia("admin")
+     */
     public function zoomAction(Request $request,$slug) {
  
         

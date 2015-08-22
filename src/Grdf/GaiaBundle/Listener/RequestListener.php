@@ -2,7 +2,9 @@
 
 namespace Grdf\GaiaBundle\Listener;
 
-use Doctrine\Common\Annotations\Reader;
+use Doctrine\Common\Annotations\AnnotationReader;
+use Doctrine\Common\Annotations\FileCacheReader;
+use Core\IRMSecurityBundle\Service;
 use Grdf\GaiaBundle\Service\GaiaService;
 use Grdf\DefaultBundle\Service\SecurityService;
 use Grdf\GaiaBundle\Annotation\RequiresGaia;
@@ -15,7 +17,7 @@ class RequestListener
 {
 
     /**
-     * @var \Doctrine\Common\Annotations\Reader 
+     * @var \Doctrine\Common\Annotations\FileCacheReader 
      */
     private $reader;
 
@@ -25,12 +27,15 @@ class RequestListener
     private $gaia;
 
     /**
-     * @var \Grdf\DefaultBundle\Service\SecurityService
+     * @var \Core\IRMSecurityBundle\Service
      */
     private $security;
-
-    public function __construct(Reader $reader, GaiaService $gaia, SecurityService $security)
-    {
+//    public function __construct(Reader $reader, GaiaService $gaia, IRMSecurityService $security)
+//  MARC LAST WORKED HERE 19 AUG 
+//    public function __construct( ContainerInterface $conty)
+    //public function __construct(Reader $reader, GaiaService $gaia)
+    public function __construct(FileCacheReader $reader, GaiaService $gaia,  $security)
+   {
         $this->reader = $reader;
         $this->gaia = $gaia;
         $this->security = $security;
@@ -52,10 +57,19 @@ class RequestListener
             $event->setResponse($response);
         }
     }
-
+/**
+ *  Notes de Marc : 
+ * @param FilterControllerEvent $event
+ * @return type
+ * @throws \Exception
+ */
     public function onFilterController(FilterControllerEvent $event)
     {
-        //Return if no controller
+
+// Marc inserted this to test if it's being used
+                throw new \Exception('GAIA non détecté !', 8701);
+        
+//Return if no controller
         if (!is_array($controller = $event->getController())) {
             return;
         }
