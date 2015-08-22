@@ -13,6 +13,12 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 
+/**
+ * RequestListener est une classe déclarée en tant que Service. La
+ * déclaration est faite dans le fichier service.xml présent dans le dossier 
+ * Resources\Config du Bundle ayant le dossier 'GaiaBundle'
+ */
+
 class RequestListener
 {
 
@@ -58,7 +64,12 @@ class RequestListener
         }
     }
 /**
- *  Notes de Marc : 
+ *  Notes de Marc : onFilterController est un membre de classe qui est automatiquement
+ * appelé par le moteur symfony2 (la classe doit avoir été déclarée en Service et doit être
+ * instancié dans le Container de symfony) en amont de chaque traitement de requête
+ * Dans ce cas particulier, le filtre va employer un autre Service, déclaré dans 
+ * 'GaiaService.php' pour tester la présence de certains codes qui sont la preuve de
+ * l'autorisation de l'originaire de la requête.
  * @param FilterControllerEvent $event
  * @return type
  * @throws \Exception
@@ -67,7 +78,7 @@ class RequestListener
     {
 
 // Marc inserted this to test if it's being used
-                throw new \Exception('GAIA non détecté !', 8701);
+                throw new \Exception('SUCCES : Nous sommes dans onFilterController !', 8701);
         
 //Return if no controller
         if (!is_array($controller = $event->getController())) {

@@ -10,12 +10,20 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
  * Cette classe prend en charge les aspects sécurité de l'IRM Applicative
+ * Un usage des paramètrage situés dans le service.yml va permettre à une
+ * instance d'IRMSecurityService d'agir en interprète entre les appels
+ * internes à l'IRMApplicative et l'environnement de sécurité existant
+ * 
+ * Le OOP Design Pattern 'Adapter' combiné au pattern 'Decorator' sera 
+ * mis en oeuvre pour tenter de rendre cette classe conforme au principe
+ * 'Open to Extension, Closed to modification'
  */
 class IRMSecurityService extends ContainerAware
 {
     
     private $localSecurityServiceObj;
     private $localSecurityServiceId;
+    private $appliedLevel;
     /**
      * Constructeur déclaré dans %bundle-root%/Resources/config/services.xml
      * @param ContainerInterface $conty Un container ayant des références aux services implémentée pour cette session
@@ -24,7 +32,7 @@ class IRMSecurityService extends ContainerAware
     public function __construct(ContainerInterface $conty, $_localSecurityServiceName = "grdf.gaiabundle.gaia") {
         
         $this->setContainer($conty);
-       //  Expected : "grdf.gaiabundle.gaia"
+       //  Valeur attendue : "grdf.gaiabundle.gaia" ou un autre nom de service 
         $this->localSecurityServiceId = $_localSecurityServiceName;
     }
 
@@ -37,7 +45,9 @@ class IRMSecurityService extends ContainerAware
  * @return string with arbitrary status description depending on base security service
  */    
 public function getIRMSecurityStatus() {
-    
+   // TODO : employer les méthodes abstraites et la spécialisation
+    //         par extensions vers des sous-classes. Sortir la référence
+    //         à l'objet sécurité local (foreign).
  $retval = "ERROR : In getIRMSecurityStatus : FAILED TO GET CONTAINER";
     if (is_object($this->container)) {
         
@@ -69,12 +79,19 @@ public function getCapabilities($positionInList,$format = "YAML") {
         }
     }
     $retval = "countofcapabilities : 1\n"
+."class:\n"
+    ."name:"
+    ." IRMSecurityService\n"
+    ."parent:"
+    ." null\n"
 ."capabilities:\n"
     ."getSecurityStatus:\n"
         ."return: string\n"
-        ."arguments: []\n";
- 
-    
+        ."arguments: []\n"
+    ."setIRMSecurityLevel:\n"
+        ."return: integer\n"
+        ."arguments: [integer]\n";
+   
     switch ($format) {
         case "YAML":
 
@@ -92,6 +109,46 @@ public function getCapabilities($positionInList,$format = "YAML") {
     return $retval;
    
     }
+    /**
+     * une Méthode générique qui va déclencher une méthode d'une sousclasse
+     * qui a été implémentée pour servir de 'pont' vers la classe étrangère
+     * concue emplicitement pour l'environement spécifique dans lequel l'appli
+     * travaille
+     * @param type $index
+     */
+    public function invokeCapabilityByIndex($index, $object) 
+    {
+        
+    }
+    /**
+     * une Méthode générique qui va déclencher une méthode d'une sousclasse
+     * qui a été implémentée pour servir de 'pont' vers la classe étrangère
+     * concue emplicitement pour l'environement spécifique dans lequel l'appli
+     * travaille
+     * @param type $name
+     */
+     public function invokeCapabilityByName($name, $object) 
+    {
+        
+    }
+    /**
+     * cette Méthode doit être impléménté dans chaque sous-classe de la
+     * classe IRMSecurityService.
+     */   
+    protected function appendForeignSecurityClassToCollection()
+    {
+        
+    }
     
+    public function setIRMSecurityLevel($requestedLevelInteger = 4)
+    {
+        
+        // TODO : faire un proccessus intelligent !
+        $this->appliedLevel = 4;
+        
+        $appliedLevel = $requestedLevelInteger;
+        // renvoyer le niveau sécurité appliqué effectivement
+        return $appliedLevel;
+    }
 }
 
